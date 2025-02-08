@@ -37,7 +37,7 @@ Now go to "Edit Parameters" and set `*SMDL` to `1`. This will enable auto downlo
 ### "Toolchain"
 
 This "toolchain" is quite ad-hoc and developer-unfriendly but it may help you get started.
-See `toolchain/example` for sample projects.
+See `programs/` for sample projects.
 The best way to get started for now is just to copy one of them.
 
 Compiling and uploading an example (game of life):
