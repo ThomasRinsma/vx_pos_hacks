@@ -43,7 +43,7 @@ The best way to get started for now is just to copy one of them.
 Compiling and uploading an example (game of life):
 
 1. Install the `arm-none-eabi` toolchain and `python-pyserial`.
-2. `cd toolchain/example/gol`
+2. `cd programs/gol`
 3. Customize variables in `Makefile` according to your situation (device and TTY)
 4. `make`
 5. `make upload`
@@ -51,12 +51,12 @@ Compiling and uploading an example (game of life):
 Known problems/limitations:
 
 - Only `.text` and `.rodata` segments work for now
-- Only a subset of libc is implemented (see `toolchain/example/*/lib.c`)
-	- TODO: generalize?
+- Only a subset of libc is implemented (see `programs/*/lib.c`)
+- Getting floats to work is a pain, I believe I hacked something together with a softfloat library but YMMV.
 
 ## Technical details
 
-TODO (link to further info on a blog post)
+TODO (link to further info on a future blog post)
 
 ## See also
 
