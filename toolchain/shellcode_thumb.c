@@ -74,15 +74,16 @@ static const char buf2[] = {
 	"\xe2\x8d\xd0\x10"  // add	sp, sp, #16
 	"\xe1\x2f\xff\x1e"  // bx	lr
 	// "\x40\x00\x75\x34"  // .word	0x40007534 <-- where to copy to (OS QT000500)
-	"\x40\x00\x4b\x70"  // .word	0x40004b70 <-- where to copy to (OS QTE50301)
-
+	//"\x40\x00\x4b\x70"  // .word	0x40004b70 <-- where to copy to (OS QTE50301)
+	"\x40\x00\x55\x48"  // .word	0x40005548 <-- where to copy to (OS QT100272) ! Untested
 	"\x40\x51\x00\x00"  // .word	0x40510000 <-- where to copy from
 };
 __attribute__((section(".text")))
 static const char buf3[] = {
 	"\xe2\x8f\x00\x00"  // adr r0,+0x8 (0x4000753c)
 	// "\xeb\x00\x1d\xe6"  // bl  auth_and_generate_sig_file (@ 0x4000ecd8) // OS QT000500
-	"\xeb\x00\x1a\x45"  // bl  auth_and_generate_sig_file (@ 0x4000b490) // OS QTE50301
+	//"\xeb\x00\x1a\x45"  // bl  auth_and_generate_sig_file (@ 0x4000b490) // OS QTE50301
+	"\xeb\x00\x1b\xfd"  // bl  auth_and_generate_sig_file (@ 0x4000c548) // OS QT100272 ! Untested
 	// general
 	"\x49\x3a\x31\x2f"  // ds  "I:1/"
 	"\x48\x2e\x4f\x55"  // ds  "H.OU"
