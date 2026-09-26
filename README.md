@@ -82,19 +82,25 @@ Also, your device may not be vulnerable at all, if it has a new enough bootloade
 
 The following pre-made payloads are provided at the moment:
 
-- vx820:
+- vx820, vx520c, vx675:
 	- OS: `QT000500`
 	- SBI: `03_04` and `03_10`
 - e355:
 	- OS: `QTE50301`
 	- SBI: `03_10`
+- vx520
+	- SBI: `02_85`
+- pp1000sev3	
+	- SBI: `03_11`
 
 To see your device's versions, navigate to "Software Versions" in the system menu.
 SBI also specifies its version and build date over serial, when booted into download mode (see below).
 
+Devices missing an OS do not have an auth payload due to TAMPER mode forbidding exploit tests.
+
 ### Notes on the e355
 
-The e355 does not have an obvious RS232 port, but only a visible micro-USB connector.
+The e355 and vx675 does not have an obvious RS232 port, but only a visible micro-USB connector.
 Turns out, the USB data lines are used as 5V UART TX/RX when no power is applied.
 
 ```
